@@ -5,21 +5,24 @@ import java.text.SimpleDateFormat;
 
 /**
  * Represents a calendar date with validation capabilities.
- *
  * This class encapsulates a date specified by day, month, and year components. It offers
  * functionality to validate the date against specific rules: the year must be within the range of
  * 1900 to 2050, inclusive; the month must be within 1 to 12, inclusive; and the day must be valid
  * within the context of the specified month and year, taking into account variations for leap
  * years.
- *
  * Instances of this class are immutable, meaning that once a Date object is created, the day,
  * month, and year values cannot be changed.
  */
 public class Date {
+
   private int fieldaddedBycollaborator;
   private final int day;
   private final int month;
   private final int year;
+
+  public void methodAddedByOwner(){
+    System.out.println("Method added by the owner");
+  }
 
   /**
    * Retrieves the day component of this date.
@@ -66,7 +69,6 @@ public class Date {
    * Validates the date according to the predefined rules: the year must be within 1900 to 2050, the
    * month within 1 to 12, and the day valid within the given month and year, considering leap
    * years.
-   *
    * This method utilizes {@link SimpleDateFormat} to parse the date, configured to be
    * non-lenient to ensure strict validation against the provided day, month, and year.
    *
